@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <script src="./js/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="./css/jquery-ui.min.css">
+        <script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script> 
+		<link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' /> 
+		<script type='text/javascript' src='unitegallery/themes/default/ug-theme-default.js'></script> 
+        <link rel='stylesheet' href='unitegallery/themes/default/ug-theme-default.css' type='text/css' />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+        
+        <style>
+            body{
+                background-image: url("./img/background.jpeg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-family: 'Open Sans', sans-serif;
+            }
+            h1,h2{
+                text-transform: uppercase;
+                
+                text-align: center;
+            }
+            h1{
+                font-size: 30pt;
+            }
+            h2{
+                font-size: 20pt;
+            }
+            main, header,footer div,#contactus{
+                background-color: rgba(255,255,255,0.5);
+                padding: 2%;
+                border-radius: 20px;
+                border: white 10px solid;
+                margin: 2%;
+            }
+            header{
+                color: white;
+            }
+            main{
+                
+                width: 50%;
+                float: left;
+            }
+            #gallery{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            button,span{
+                text-transform: uppercase;
+            }
+            footer{
+                width: 30%;
+                float: right;
+            }
+            #contactus{
+                position: static;
+                top: 50vw;
+                left: 50vw;
+                z-index: 1000;
+            }
+            footer div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+            }
+            a{
+                color: blue;
+                text-decoration:none;
+            }
+        </style>
+
+        <title>Open Sky</title>
+        <script type="text/javascript"> 
+			jQuery(document).ready(function(){
+                $( "#contactus" ).hide();
+                jQuery("#gallery").unitegallery();
+                $( "#open" ).click(function() {
+                $( "#contactus" ).show( "fade", 1000 );
+            });
+            $( "#close" ).click(function() {
+                $( "#contactus" ).hide( "fade", 1000 );
+            });
+			}); 
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Open Sky</h1>
+            <h2>Fotos y Videos de todo el mundo en Alta Calidad</h2>
+        </header>
+        <main>
+            <div id="gallery" style="display: none">
+	    		<img alt="Taj Mahal" src="./img/taj.jpg"
+		    		data-image="./img/taj.jpg"
+			    	data-description="Taj Mahal. Tomada por jsd43">
+	    		<img alt="Torre Eiffel" src="./img/fr.jpg"
+                    data-image="./img/fr.jpg"
+                    data-description="Torre Eiffel. Tomada por kaik3">    
+                <img alt="Campo de Flores" src="./img/fr.jpg"
+                    data-image="./img/fr.jpg"
+                    data-description="Campo de Flores. Tomada por Alberto Campos">
+                <img alt="Vista Aerea" src="./img/air.jpg"
+                    data-image="./img/fr.jpg"
+                    data-description="Vista Aerea. Tomada por Juan Antonio Lopez">    
+                <img alt="Peru"
+                    data-type="youtube"
+                    data-videoid="1La4QzGeaaQ">
+                <img alt="Northern Islands"
+                    data-type="youtube"
+                    data-videoid="icZotxynzJI">
+                <img alt="Northern Islands"
+                    data-type="youtube"
+                    data-videoid="LXb3EKWsInQ">
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>¿Tienes fotos o videos buenos?</p>
+                <button class="ui-button ui-widget ui-corner-all" id="open">enseñanoslos</button>
+            </div>
+            <div id="contactus">
+                <p>¿Quieres tener la oportunidad de aparecer en nuestra web? Estas de suerte<br>
+                En Open Sky siempre buscamos nuevos contenidos a mostrar mandanos una imagen a nuestro <a href="mailto:solicitud.fotos@opensky.example">correo</a> y posiblemente veas tu imagen. El unico requisito que pedimos es que este en resolucion 1080p como mínimo</p>
+                <button class="ui-button ui-widget ui-corner-all" id="close">Cerrar</button>
+            </div>
+        </footer>
+    </body>
+</html>
