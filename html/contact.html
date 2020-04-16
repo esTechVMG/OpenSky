@@ -18,11 +18,18 @@
     <link href="../dist/css/smart_wizard_theme_arrows.css" rel="stylesheet" type="text/css" />
     <link href="../css/index.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <title>Contactanos</title>
     <script>
         $(document).ready(function () {
             $('#smartwizard').smartWizard();
         });
     </script>
+      <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+        </script>
     <style>
         body {
             background-image: url("../img/background.jpeg");
@@ -36,30 +43,42 @@
     </style>
 </head>
 
-<body class="d-flex p-2">
-    <div id="smartwizard" class="w-50 center">
+<body class="d-flex justify-content-center align-items-bottom">
+    <div id="smartwizard" class="w-50">
         <ul>
-            <li><a href="#step-1">Step Title<br /><small>Step description</small></a></li>
-            <li><a href="#step-2">Step Title<br /><small>Step description</small></a></li>
-            <li><a href="#step-3">Step Title<br /><small>Step description</small></a></li>
-            <li><a href="#step-4">Step Title<br /><small>Step description</small></a></li>
+            <li><a href="#step-1">Informacion Basica<br /></a></li>
+            <li><a href="#step-2">Datos de Contacto<br /></a></li>
+            <li><a href="#step-3">Archivo<br /></a></li>
+            <li><a href="#step-4">Mensaje<br /></a></li>
         </ul>
 
         <div>
             <div id="step-1" class="">
-                Step Content
+                <label>Nombre</label>
+                <input type="text"><br>
+                <label>Apellidos</label>
+                <input type="text"><br>
+                <label>Fecha de la Foto</label>
+                <input type="date">
             </div>
             <div id="step-2" class="">
-                Step Content
+                <label>E-Mail</label>
+                <input type="text"><br>
+                <label>Teléfono</label>
+                <input type="number"><br>
             </div>
             <div id="step-3" class="">
-                Step Content
+                <label>Seleccione una imagen</label>
+                <input type="file">
             </div>
             <div id="step-4" class="">
-                Step Content
+                <label for="checkbox-nested-4">Aceptas nuestras politicas y terminos de uso
+                    <input type="checkbox" name="checkbox-nested-4" id="checkbox-nested-4">
+                </label>
+                <br><input type="submit" class="ui-button ui-widget ui-corner-all" value="Enviar">
             </div>
         </div>
-        <button class="ui-button ui-widget ui-corner-all">Send</button>
+        
     </div>
 </body>
 
