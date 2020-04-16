@@ -1,0 +1,59 @@
+body{
+    background-image: url("./img/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h2{
+    text-transform: uppercase;
+    
+    text-align: center;
+}
+h1{
+    font-size: 30pt;
+}
+h2{
+    font-size: 20pt;
+}
+main, header,footer div,#contactus{
+    background-color: rgba(255,255,255,0.5);
+    padding: 2%;
+    border-radius: 20px;
+    border: white 10px solid;
+    margin: 2%;
+}
+header{
+    color: white;
+}
+main{
+    
+    width: 50%;
+    float: left;
+}
+#gallery{
+    margin-left: auto;
+    margin-right: auto;
+}
+button,span{
+    text-transform: uppercase;
+}
+footer{
+    width: 30%;
+    float: right;
+}
+#contactus{
+    position: static;
+    top: 50vw;
+    left: 50vw;
+    z-index: 1000;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+a{
+    color: blue;
+    text-decoration:none;
+}
